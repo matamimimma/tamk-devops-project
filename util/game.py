@@ -4,3 +4,6 @@
 class Game:
     def __init__(self):
         self.running = True
+
+    def run_game(self):
+        pass
