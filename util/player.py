@@ -9,8 +9,17 @@ class Player:
         self.inventory = []
 
 # Change area on a map
-    def move(self):
-        pass
+    def move(self, target_dir):
+        # possible directions used in game
+        directions =["north", "east", "south", "west"]
+
+        if target_dir in directions:
+            # 0: north, 1:east, 2:south, 3:west
+            dir_index = directions.index(target_dir)
+
+            # TODO:
+            # 1. check if direction possible from current pos
+            # 2. -> change player position
 
 # Test code here
 if __name__ == "__main__":
