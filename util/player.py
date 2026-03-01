@@ -26,7 +26,9 @@ class Player:
             else:
                 print(f"Moving to {target_dir}")
 
-            # TODO: change player position
+                # TODO: change player position
+        else:
+            print("Direction not recognised")
 
 # Test code here
 if __name__ == "__main__":
