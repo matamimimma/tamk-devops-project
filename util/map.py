@@ -31,7 +31,7 @@ class Map:
 
 # Print area description based on map index
     def print_area_description(self, index):
-        pass
+        print(f"** {self.areas[index]["name"]} **\n{self.areas[index]["desc"]}")
 
 # test code here
 if __name__ == "__main__":
