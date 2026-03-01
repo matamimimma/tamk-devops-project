@@ -29,6 +29,7 @@ class Map:
                 return index
         return -1
 
+# test code here
 if __name__ == "__main__":
-    # test code here
-    pass
+    map = Map()
+    print(map.get_index("area1"))
