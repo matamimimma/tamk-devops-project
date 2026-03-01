@@ -23,7 +23,7 @@ class Map:
         ]
 
 # Return index of area based on the "name" attribute, if not found return -1
-    def get_map_index(self, area_name):
+    def get_index(self, area_name):
         pass
 
 if __name__ == "__main__":
