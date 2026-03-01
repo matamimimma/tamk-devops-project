@@ -11,5 +11,5 @@ class Player:
         pass
 
 # Test code here
-if __name__ == "__main__"_
+if __name__ == "__main__":
     pass
