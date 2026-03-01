@@ -14,4 +14,10 @@ class Player:
 
 # Test code here
 if __name__ == "__main__":
+    map = Map()
+    start_pos = map.get_index("area1")
+    player = Player(start_pos)
+
+    print(player.position_index)
+    map.print_area_description(player.position_index)
     pass
