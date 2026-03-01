@@ -24,7 +24,10 @@ class Map:
 
 # Return index of area based on the "name" attribute, if not found return -1
     def get_index(self, area_name):
-        pass
+        for index, map_area in enumerate(self.areas):
+            if area_name == map_area["name"]:
+                return index
+        return -1
 
 if __name__ == "__main__":
     # test code here
