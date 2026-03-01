@@ -36,4 +36,4 @@ class Map:
 # test code here
 if __name__ == "__main__":
     map = Map()
-    print(map.get_index("area1"))
+    map.print_area_description(map.get_index("area3"))
