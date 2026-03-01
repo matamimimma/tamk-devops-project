@@ -31,7 +31,11 @@ class Map:
 
 # Print area description based on map index
     def print_area_description(self, index):
-        print(f"** {self.areas[index]["name"]} **\n{self.areas[index]["desc"]}")
+        indent = " "
+        print(
+            f"\n{indent:<4} ** {self.areas[index]['name']} **\n"
+            f"{self.areas[index]['desc']}\n"
+            )
 
 # test code here
 if __name__ == "__main__":
