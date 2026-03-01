@@ -4,8 +4,8 @@
 from map import Map
 
 class Player:
-    def __init__(self):
-        self.position = None
+    def __init__(self, area_index):
+        self.position_index = area_index
         self.inventory = []
 
 # Change area on a map
