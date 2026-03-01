@@ -7,17 +7,17 @@ class Map:
             {
                 "name": "area1"
                 , "desc": "Area1 description."
-                , "move": [None, None, None, None]
+                , "move": ["area2", None, None, None]
                         # [north, east, south, west]
             },
             {
                 "name": "area2"
                 , "desc": "Area2 description."
-                , "move": [None, None, None, None]
+                , "move": [None, "area3", "area1", None]
             },
             {
                 "name": "area2"
                 , "desc": "Area2 description."
-                , "move": [None, None, None, None]
+                , "move": [None, None, None, "area2"]
             }
         ]
