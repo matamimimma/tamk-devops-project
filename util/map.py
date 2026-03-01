@@ -16,8 +16,8 @@ class Map:
                 , "move": [None, "area3", "area1", None]
             },
             {
-                "name": "area2"
-                , "desc": "Area2 description."
+                "name": "area3"
+                , "desc": "Area3 description."
                 , "move": [None, None, None, "area2"]
             }
         ]
