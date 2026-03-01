@@ -21,3 +21,7 @@ class Map:
                 , "move": [None, None, None, "area2"]
             }
         ]
+
+if __name__ == "__main__":
+    # test code here
+    pass
