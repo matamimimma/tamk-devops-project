@@ -29,6 +29,10 @@ class Map:
                 return index
         return -1
 
+# Print area description based on map index
+    def print_area_description(self, index):
+        pass
+
 # test code here
 if __name__ == "__main__":
     map = Map()
