@@ -1,6 +1,8 @@
 # player.py
 # Player specific operations and variables
 
+from map import Map
+
 class Player:
     def __init__(self):
         self.position = None
