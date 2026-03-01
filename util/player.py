@@ -41,12 +41,12 @@ if __name__ == "__main__":
     map = Map()
     start_pos = map.get_index("area1")
     player = Player(start_pos)
-    location = map.areas[player.position_index]
 
-    print(player.position_index)
-    map.print_area_description(player.position_index)
+    while True:
+        location = map.areas[player.position_index]
 
-    user_input = input("give direction > ")
+        map.print_area_description(player.position_index)
 
-    player.move(location, user_input, map.areas)
-    map.print_area_description(player.position_index)
+        user_input = input("give direction > ")
+
+        player.move(location, user_input, map.areas)
