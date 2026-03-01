@@ -11,7 +11,8 @@ class Player:
 # Change area on a map
 # current_pos = area block from map
 # target_dir = string
-    def move(self, current_pos, target_dir):
+# area_map = map.areas
+    def move(self, current_pos, target_dir, area_map):
         # possible directions used in game
         directions =["north", "east", "south", "west"]
 
@@ -25,8 +26,13 @@ class Player:
                 print("Not possible")
             else:
                 print(f"Moving to {target_dir}")
-
-                # TODO: change player position
+                # iterate area_map and check for matching name
+                for area in area_map:
+                    if area["name"] == new_pos_name:
+                        # update position_index to new position
+                        self.position_index = area_map.index(area)
+                    else:
+                        continue
         else:
             print("Direction not recognised")
 
@@ -42,4 +48,5 @@ if __name__ == "__main__":
 
     user_input = input("give direction > ")
 
-    player.move(location, user_input)
+    player.move(location, user_input, map.areas)
+    map.print_area_description(player.position_index)
