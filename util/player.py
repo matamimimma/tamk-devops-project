@@ -9,3 +9,7 @@ class Player:
 # Change area on a map
     def move(self):
         pass
+
+# Test code here
+if __name__ == "__main__"_
+    pass
