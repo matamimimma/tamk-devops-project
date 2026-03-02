@@ -14,6 +14,7 @@ if __name__ == "__main__":
     game = Game(map, player)
 
     print("-- START --")
+    map.print_area_description(player.position_index)
 
     while game.running:
         game.run_game()
