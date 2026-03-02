@@ -9,7 +9,6 @@ class Player:
         self.inventory = []
 
 # Change area on a map
-# area_map = map.areas
 # current_pos = area block from map
 # target_dir = string
     def move(self, map, current_pos, target_dir):
