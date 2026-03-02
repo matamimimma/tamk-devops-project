@@ -20,3 +20,7 @@ class Items:
                 , "action_desc": None
             }
         }
+
+# Print items description
+    def print_item_description(self, item):
+        pass
