@@ -2,9 +2,11 @@
 # Game controlling operations (run game, control stopping, etc.)
 
 class Game:
-    def __init__(self):
+    def __init__(self, map, player):
         self.running = True
         self.commands = ["stop", "go"]
+        self.map = map
+        self.player = player
 
 # TODO: Build basic run of the game here
     def run_game(self):
