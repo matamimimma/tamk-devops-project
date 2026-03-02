@@ -17,8 +17,14 @@ class Game:
                 "Unable to process given input. Please use the following"
                 "input format: <action> <direction>"
                 )
+        # set action and target to separate variables
+        elif len(user_input) == 1:
+            action = user_input[0]
+        elif len(user_input) == 2:
+            action = user_input[0]
+            target = user_input[1]
 
-        if user_input.lower() == "stop":
+        if action == "stop":
             self.running = False        # stop game
         else:
             print(user_input.upper())
