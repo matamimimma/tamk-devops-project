@@ -11,6 +11,8 @@ class Game:
 # TODO: Build basic run of the game here
     def run_game(self):
 
+        current_pos = self.map.areas[self.player.position_index]
+
         # read user input, trandform to lower case and split into an array
         user_input = input("\n> ").lower().strip().split(" ")
 
@@ -32,6 +34,6 @@ class Game:
             if action == "stop":
                 self.running = False        # stop game
             elif action == "go":
-                print("moving")
+                self.player.move(self.map.areas, current_pos, target)
         else:
             print("Action not regognised.")
