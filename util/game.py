@@ -7,7 +7,9 @@ class Game:
 
 # TODO: Build basic run of the game here
     def run_game(self):
-        user_input = input("\n> ")      # read user input
+
+        # read user input, trandform to lower case and split into an array
+        user_input = input("\n> ").lower().strip().split(" ")
 
         if user_input.lower() == "stop":
             self.running = False        # stop game
