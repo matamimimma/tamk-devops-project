@@ -40,10 +40,16 @@ class Map:
             f"{self.areas[index]['desc']}\n"
             )
 
-    def print_items_in_area(self, current_pos):
+# Print items in area based on map index
+    def print_items_in_area(self, index):
+        indent = " "
+        print("Collectible items in area:")
+        for item in self.areas[index]["items"]:
+            print(f"{indent:<4} {item}")
         pass
 
 # test code here
 if __name__ == "__main__":
     map = Map()
     map.print_area_description(map.get_index("area3"))
+    map.print_items_in_area(map.get_index("area3"))
