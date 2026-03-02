@@ -40,6 +40,9 @@ class Map:
             f"{self.areas[index]['desc']}\n"
             )
 
+    def print_items_in_area(self, current_pos):
+        pass
+
 # test code here
 if __name__ == "__main__":
     map = Map()
