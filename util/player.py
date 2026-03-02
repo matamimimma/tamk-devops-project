@@ -9,10 +9,10 @@ class Player:
         self.inventory = []
 
 # Change area on a map
+# area_map = map.areas
 # current_pos = area block from map
 # target_dir = string
-# area_map = map.areas
-    def move(self, current_pos, target_dir, area_map):
+    def move(self, area_map, current_pos, target_dir):
         # possible directions used in game
         directions =["north", "east", "south", "west"]
 
