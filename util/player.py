@@ -25,7 +25,6 @@ class Player:
                 # moving direction not possible
                 print("Not possible")
             else:
-                print(f"Moving to {target_dir}")
                 # iterate area_map and check for matching name
                 for area in map.areas:
                     if area["name"] == new_pos_name:
