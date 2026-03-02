@@ -14,9 +14,10 @@ class Game:
         # only 1-2 word commands allowed
         if len(user_input) > 2:
             print(
-                "Unable to process given input. Please use the following"
+                "\nUnable to process given input. Please use the following"
                 "input format: <action> <direction>"
                 )
+            return
         # set action and target to separate variables
         elif len(user_input) == 1:
             action = user_input[0]
