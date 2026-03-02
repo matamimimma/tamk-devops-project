@@ -34,6 +34,6 @@ class Game:
             if action == "stop":
                 self.running = False        # stop game
             elif action == "go":
-                self.player.move(self.map.areas, current_pos, target)
+                self.player.move(self.map, current_pos, target)
         else:
             print("Action not regognised.")
