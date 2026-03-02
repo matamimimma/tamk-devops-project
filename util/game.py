@@ -11,6 +11,13 @@ class Game:
         # read user input, trandform to lower case and split into an array
         user_input = input("\n> ").lower().strip().split(" ")
 
+        # only 1-2 word commands allowed
+        if len(user_input) > 2:
+            print(
+                "Unable to process given input. Please use the following"
+                "input format: <action> <direction>"
+                )
+
         if user_input.lower() == "stop":
             self.running = False        # stop game
         else:
