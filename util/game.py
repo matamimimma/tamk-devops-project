@@ -26,7 +26,10 @@ class Game:
             action = user_input[0]
             target = user_input[1]
 
-        if action == "stop":
-            self.running = False        # stop game
+        if action in self.commands:
+            if action == "stop":
+                self.running = False        # stop game
+            elif action == "go":
+                print("moving")
         else:
-            print(" ".join(user_input).upper())
+            print("Action not regognised.")
