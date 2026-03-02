@@ -4,6 +4,7 @@
 class Game:
     def __init__(self):
         self.running = True
+        self.commands = ["stop", "go"]
 
 # TODO: Build basic run of the game here
     def run_game(self):
