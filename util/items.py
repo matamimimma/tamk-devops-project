@@ -23,4 +23,4 @@ class Items:
 
 # Print items description
     def print_item_description(self, item):
-        pass
+        print(f"{item:<15} - {self.all[item]['desc']}")
