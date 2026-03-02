@@ -15,7 +15,7 @@ class Game:
         if len(user_input) > 2:
             print(
                 "\nUnable to process given input. Please use the following"
-                "input format: <action> <direction>"
+                "\ninput format: <action> <direction>"
                 )
             return
         # set action and target to separate variables
