@@ -27,4 +27,4 @@ class Game:
         if action == "stop":
             self.running = False        # stop game
         else:
-            print(user_input.upper())
+            print(" ".join(user_input).upper())
