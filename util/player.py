@@ -78,9 +78,10 @@ class Player:
 
 # Print player inventory
     def print_inventory(self):
+        indent = " "
         print("\nItems in your inventory:")
         for item in self.inventory:
-            print(item)
+            print(f"{indent:<4} {item}")
 
 # Test code here
 if __name__ == "__main__":
