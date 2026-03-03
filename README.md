@@ -15,4 +15,19 @@ repository.
 
 ## Usage
 
+The game is run from the main.py file using the CLI:
+
+```
+python main.py
+```
+
+So far the game has functions for the following commands:
+
+- stop (quit game)
+- go
+- take
+- drop
+- inventory
+- investigate
+
 ## Authors
