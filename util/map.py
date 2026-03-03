@@ -43,7 +43,7 @@ class Map:
 # Print items in area based on map index
     def print_items_in_area(self, index):
         indent = " "
-        print("Collectible items in area:")
+        print("\nCollectible items in area:")
         for item in self.areas[index]["items"]:
             print(f"{indent:<4} {item}")
 
