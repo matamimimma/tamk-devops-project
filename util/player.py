@@ -75,6 +75,10 @@ class Player:
         if not in_inventory:
             print(f"Item not found in iventory: {target}")
 
+# Print player inventory
+    def print_inventory(self):
+        pass
+
 # Test code here
 if __name__ == "__main__":
     map = Map()
