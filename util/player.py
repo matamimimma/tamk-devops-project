@@ -56,7 +56,7 @@ class Player:
             print(f"Item not found in area: {target}")
 
 # Drop items
-    def drop(self, target, current_pos):
+    def drop(self, target):
         for item in self.inventory:
             if item.lower() == target:
                 self.inventory.remove(item)
