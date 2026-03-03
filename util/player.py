@@ -36,12 +36,13 @@ class Player:
             print("Direction not recognised")
 
 # Pick up items
-    def pick_up(self, target, current_pos):
+    def pick_up(self, target, current_pos, map):
         in_area = False
         for item in current_pos["items"]:
             if item.lower() == target:
                 in_area = True
                 self.inventory.append(item)
+                map.remove_from_area(item, self.position_index)
                 print(f"Picked up item: {item}")
             else:
                 continue
