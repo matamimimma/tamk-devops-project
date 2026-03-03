@@ -41,5 +41,7 @@ class Game:
                 self.player.drop(target, self.map)
             elif action == "inventory":
                 self.player.print_inventory()
+            elif action == "investigate":
+                self.map.print_items_in_area(self.player.position_index)
         else:
             print("Action not regognised.")
