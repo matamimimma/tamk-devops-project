@@ -63,7 +63,6 @@ class Player:
                 print(f"Item dropped: {item}")
             else:
                 continue
-        pass
 
 # Test code here
 if __name__ == "__main__":
