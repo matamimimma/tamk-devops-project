@@ -4,7 +4,7 @@
 class Game:
     def __init__(self, map, player):
         self.running = True
-        self.commands = ["stop", "go"]
+        self.commands = ["stop", "go", "take"]
         self.map = map
         self.player = player
 
