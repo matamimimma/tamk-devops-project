@@ -85,3 +85,8 @@ if __name__ == "__main__":
 
     print(player.inventory)
     print(map.areas[player.position_index])
+
+    player.drop("item1", map)
+
+    print(player.inventory)
+    print(map.areas[player.position_index])
