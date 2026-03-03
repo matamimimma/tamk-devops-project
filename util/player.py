@@ -37,7 +37,17 @@ class Player:
 
 # Pick up items
     def pick_up(self, target, current_pos):
-        pass
+        in_area = False
+        for item in current_pos["items"]:
+            if item.lower() == target:
+                in_area = True
+                self.inventory.append(item)
+                print(f"Picked up item: {item}")
+            else:
+                continue
+
+        if not in_area:
+            print(f"Item not found in area: {target}")
 
 # Test code here
 if __name__ == "__main__":
