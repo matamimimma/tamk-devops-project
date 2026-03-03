@@ -61,6 +61,7 @@ class Player:
 
         for item in self.inventory:
             if item.lower() == target:
+                in_inventory = True
                 self.inventory.remove(item)
                 map.add_to_area(item, self.position_index)
                 print(f"Item dropped: {item}")
