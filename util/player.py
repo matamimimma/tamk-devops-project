@@ -55,6 +55,10 @@ class Player:
         if not in_area:
             print(f"Item not found in area: {target}")
 
+# Drop items
+    def drop(self, target):
+        pass
+
 # Test code here
 if __name__ == "__main__":
     map = Map()
