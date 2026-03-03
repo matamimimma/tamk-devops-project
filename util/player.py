@@ -75,18 +75,17 @@ class Player:
         if not in_inventory:
             print(f"Item not found in iventory: {target}")
 
+# Print player inventory
+    def print_inventory(self):
+        indent = " "
+        print("\nItems in your inventory:")
+        for item in self.inventory:
+            print(f"{indent:<4} {item}")
+
 # Test code here
 if __name__ == "__main__":
     map = Map()
     start_pos = map.get_index("area1")
     player = Player(start_pos)
 
-    player.pick_up("item1", map.areas[player.position_index], map)
-
-    print(player.inventory)
-    print(map.areas[player.position_index])
-
-    player.drop("item1", map)
-
-    print(player.inventory)
-    print(map.areas[player.position_index])
+    player.print_inventory()
