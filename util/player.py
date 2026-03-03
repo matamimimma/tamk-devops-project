@@ -65,6 +65,8 @@ class Player:
                 print(f"Item dropped: {item}")
             else:
                 continue
+        if not in_inventory:
+            print(f"Item not found in iventory: {target}")
 
 # Test code here
 if __name__ == "__main__":
