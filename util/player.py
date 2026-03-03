@@ -1,8 +1,7 @@
 # player.py
 # Player specific operations and variables
 
-# from util.map import Map
-from map import Map
+from util.map import Map
 
 class Player:
     def __init__(self, area_index):
