@@ -46,7 +46,7 @@ class Map:
         print("Collectible items in area:")
         for item in self.areas[index]["items"]:
             print(f"{indent:<4} {item}")
-        pass
+
 
 # test code here
 if __name__ == "__main__":
