@@ -37,12 +37,17 @@ class Player:
 
 # Pick up items
     def pick_up(self, target, current_pos, map):
-        in_area = False
+        in_area = False     # item found in area
+
+        # find matching item in area
         for item in current_pos["items"]:
             if item.lower() == target:
-                in_area = True
+                in_area = True      # match found
+
                 self.inventory.append(item)
+                # remove pick up item from area
                 map.remove_from_area(item, self.position_index)
+
                 print(f"Picked up item: {item}")
             else:
                 continue
