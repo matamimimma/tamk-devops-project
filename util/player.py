@@ -78,7 +78,8 @@ class Player:
 
 # Print player inventory
     def print_inventory(self):
-        print(self.inventory)
+        for item in self.inventory:
+            print(item)
 
 # Test code here
 if __name__ == "__main__":
