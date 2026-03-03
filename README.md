@@ -31,3 +31,8 @@ So far the game has functions for the following commands:
 - investigate
 
 ## Authors
+
+- Mimmi Tamminen - [matamimimma](https://github.com/matamimimma)
+
+This game was developed using three different accounts with the goal of learning
+more git and GitHub usage.
