@@ -61,11 +61,7 @@ if __name__ == "__main__":
     start_pos = map.get_index("area1")
     player = Player(start_pos)
 
-    map.print_area_description(player.position_index)
+    player.pick_up("item1", map.areas[player.position_index], map)
 
-    while True:
-        location = map.areas[player.position_index]
-
-        user_input = input("give direction > ")
-
-        player.move(map, location, user_input)
+    print(player.inventory)
+    print(map.areas[player.position_index])
