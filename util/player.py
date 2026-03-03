@@ -78,6 +78,7 @@ class Player:
 
 # Print player inventory
     def print_inventory(self):
+        print("\nItems in your inventory:")
         for item in self.inventory:
             print(item)
 
