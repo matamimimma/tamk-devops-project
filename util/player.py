@@ -87,10 +87,4 @@ if __name__ == "__main__":
 
     player.pick_up("item1", map.areas[player.position_index], map)
 
-    print(player.inventory)
-    print(map.areas[player.position_index])
-
-    player.drop("item1", map)
-
-    print(player.inventory)
-    print(map.areas[player.position_index])
+    player.print_inventory()
