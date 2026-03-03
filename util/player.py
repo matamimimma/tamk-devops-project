@@ -57,7 +57,7 @@ class Player:
 
 # Drop items
     def drop(self, target):
-        in_area = False
+        in_inventory = False
 
         for item in self.inventory:
             if item.lower() == target:
