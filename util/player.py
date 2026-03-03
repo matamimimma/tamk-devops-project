@@ -56,7 +56,7 @@ class Player:
             print(f"Item not found in area: {target}")
 
 # Drop items
-    def drop(self, target):
+    def drop(self, target, current_pos):
         pass
 
 # Test code here
