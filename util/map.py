@@ -52,7 +52,7 @@ class Map:
         self.areas[pos_index]["items"].remove(item)
 
 # Add item to area when dropped
-    def add_to_area(self, item):
+    def add_to_area(self, item, pos_index):
         pass
 
 # test code here
