@@ -39,5 +39,7 @@ class Game:
                 self.player.pick_up(target, current_pos, self.map)
             elif action == "drop":
                 self.player.drop(target, self.map)
+            elif action == "inventory":
+                self.player.print_inventory()
         else:
             print("Action not regognised.")
