@@ -87,6 +87,4 @@ if __name__ == "__main__":
     start_pos = map.get_index("area1")
     player = Player(start_pos)
 
-    player.pick_up("item1", map.areas[player.position_index], map)
-
     player.print_inventory()
