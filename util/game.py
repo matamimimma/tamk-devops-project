@@ -35,5 +35,7 @@ class Game:
                 self.running = False        # stop game
             elif action == "go":
                 self.player.move(self.map, current_pos, target)
+            elif action == "take":
+                self.player.pick_up(target, current_pos, self.map)
         else:
             print("Action not regognised.")
