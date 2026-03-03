@@ -57,6 +57,12 @@ class Player:
 
 # Drop items
     def drop(self, target, current_pos):
+        for item in self.inventory:
+            if item.lower() == target:
+                self.inventory.remove(item)
+                print(f"Item dropped: {item}")
+            else:
+                continue
         pass
 
 # Test code here
