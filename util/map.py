@@ -51,6 +51,10 @@ class Map:
     def remove_from_area(self, item, pos_index):
         self.areas[pos_index]["items"].remove(item)
 
+# Add item to area when dropped
+    def add_to_area(self, item):
+        pass
+
 # test code here
 if __name__ == "__main__":
     map = Map()
