@@ -37,5 +37,7 @@ class Game:
                 self.player.move(self.map, current_pos, target)
             elif action == "take":
                 self.player.pick_up(target, current_pos, self.map)
+            elif action == "drop":
+                self.player.drop(target, self.map)
         else:
             print("Action not regognised.")
