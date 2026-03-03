@@ -53,6 +53,7 @@ class Map:
 
 # Add item to area when dropped
     def add_to_area(self, item, pos_index):
+        self.areas[pos_index]["items"].append(item)
         pass
 
 # test code here
