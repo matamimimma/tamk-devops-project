@@ -47,6 +47,9 @@ class Map:
         for item in self.areas[index]["items"]:
             print(f"{indent:<4} {item}")
 
+# Remove items from area when picked up
+    def remove_from_area(self, item):
+        pass
 
 # test code here
 if __name__ == "__main__":
