@@ -35,17 +35,33 @@ class Player:
         else:
             print("Direction not recognised")
 
+# Pick up items
+    def pick_up(self, target, current_pos, map):
+        in_area = False     # item found in area
+
+        # find matching item in area
+        for item in current_pos["items"]:
+            if item.lower() == target:
+                in_area = True      # match found
+
+                self.inventory.append(item)
+                # remove pick up item from area
+                map.remove_from_area(item, self.position_index)
+
+                print(f"Picked up item: {item}")
+            else:
+                continue
+
+        if not in_area:
+            print(f"Item not found in area: {target}")
+
 # Test code here
 if __name__ == "__main__":
     map = Map()
     start_pos = map.get_index("area1")
     player = Player(start_pos)
 
-    map.print_area_description(player.position_index)
+    player.pick_up("item1", map.areas[player.position_index], map)
 
-    while True:
-        location = map.areas[player.position_index]
-
-        user_input = input("give direction > ")
-
-        player.move(map, location, user_input)
+    print(player.inventory)
+    print(map.areas[player.position_index])

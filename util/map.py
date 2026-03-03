@@ -46,7 +46,10 @@ class Map:
         print("Collectible items in area:")
         for item in self.areas[index]["items"]:
             print(f"{indent:<4} {item}")
-        pass
+
+# Remove items from area when picked up
+    def remove_from_area(self, item, pos_index):
+        self.areas[pos_index]["items"].remove(item)
 
 # test code here
 if __name__ == "__main__":
