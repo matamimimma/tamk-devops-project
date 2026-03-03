@@ -4,7 +4,7 @@
 class Game:
     def __init__(self, map, player):
         self.running = True
-        self.commands = ["stop", "go", "take"]
+        self.commands = ["stop", "go", "take", "drop"]
         self.map = map
         self.player = player
 
@@ -37,5 +37,7 @@ class Game:
                 self.player.move(self.map, current_pos, target)
             elif action == "take":
                 self.player.pick_up(target, current_pos, self.map)
+            elif action == "drop":
+                self.player.drop(target, self.map)
         else:
             print("Action not regognised.")

@@ -55,6 +55,26 @@ class Player:
         if not in_area:
             print(f"Item not found in area: {target}")
 
+# Drop items
+    def drop(self, target, map):
+        in_inventory = False    # item found in inventory
+
+        # find matching item in inventory
+        for item in self.inventory:
+            if item.lower() == target:
+                in_inventory = True     # match found
+
+                self.inventory.remove(item)
+                # add dropped item to current position area
+                map.add_to_area(item, self.position_index)
+
+                print(f"Item dropped: {item}")
+            else:
+                continue
+
+        if not in_inventory:
+            print(f"Item not found in iventory: {target}")
+
 # Test code here
 if __name__ == "__main__":
     map = Map()
@@ -62,6 +82,11 @@ if __name__ == "__main__":
     player = Player(start_pos)
 
     player.pick_up("item1", map.areas[player.position_index], map)
+
+    print(player.inventory)
+    print(map.areas[player.position_index])
+
+    player.drop("item1", map)
 
     print(player.inventory)
     print(map.areas[player.position_index])
