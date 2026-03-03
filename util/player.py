@@ -35,6 +35,10 @@ class Player:
         else:
             print("Direction not recognised")
 
+# Pick up items
+    def pick_up(self, target, current_pos):
+        pass
+
 # Test code here
 if __name__ == "__main__":
     map = Map()
