@@ -7,7 +7,7 @@ from map import Map
 class Player:
     def __init__(self, area_index):
         self.position_index = area_index
-        self.inventory = ["testItem1", "testItem2"]
+        self.inventory = []
 
 # Change area on a map
 # current_pos = area block from map
