@@ -44,5 +44,9 @@ class Game:
                 self.player.print_inventory()
             elif action == "investigate":
                 self.map.print_items_in_area(self.player.position_index)
+
+        elif action in self.player.item_commands:
+            self.player.do_item_action(action, target, self.items)
+
         else:
             print("Action not regognised.")
