@@ -67,6 +67,3 @@ class Game:
                     continue
                 else:
                     print(f"{item} <{self.items.all[item]["action"]}>")
-
-if __name__ == "__main__":
-    Game.print_help()
