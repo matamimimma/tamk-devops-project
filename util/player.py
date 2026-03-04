@@ -8,6 +8,7 @@ class Player:
     def __init__(self, area_index):
         self.position_index = area_index
         self.inventory = []
+        self.item_commands = []
 
 # Change area on a map
 # current_pos = area block from map
