@@ -57,4 +57,6 @@ class Game:
             "\nPlease use input format <action> <target>"
             "\nGame uses the following action commands:"
             )
+        for comm in self.commands:
+            print(comm)
         pass
