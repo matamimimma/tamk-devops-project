@@ -34,6 +34,4 @@ if __name__ == "__main__":
     items = Items()
     inv = ["item1", "item3"]
 
-    for item in inv:
-        if item in items.all:
-            items.print_item_description(item)
+    items.print_action_decription("item1")
