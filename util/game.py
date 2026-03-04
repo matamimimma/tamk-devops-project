@@ -7,6 +7,7 @@ class Game:
         self.commands = ["stop", "go", "take", "drop", "inventory", "investigate"]
         self.map = map
         self.player = player
+        self.items = items
 
 # TODO: Build basic run of the game here
     def run_game(self):
