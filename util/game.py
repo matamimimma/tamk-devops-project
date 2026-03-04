@@ -56,17 +56,18 @@ class Game:
 
 # Print game instructions
     def print_help(self):
+        indent = " "
         print(
             "\nPlease use input format <action> <target>"
-            "\nGame uses the following action commands:"
+            "\n\nGame uses the following action commands:"
             )
         for comm in self.commands:
-            print(comm)
+            print(f"{indent:<4} {comm}")
 
         if not self.player.inventory == []:
-            print("Item specific commands for items in your inventory:")
+            print("\nItem specific commands for items in your inventory:")
             for item in self.player.inventory:
                 if self.items.all[item]["action"] == None:
                     continue
                 else:
-                    print(f"{item} <{self.items.all[item]["action"]}>")
+                    print(f"{indent:<4} {item:<15} <{self.items.all[item]["action"]}>")
