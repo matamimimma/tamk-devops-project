@@ -59,7 +59,7 @@ class Player:
             print(f"Item not found in area: {target}")
 
 # Drop items
-    def drop(self, target, map):
+    def drop(self, target, map, game_items):
         in_inventory = False    # item found in inventory
 
         # find matching item in inventory
@@ -70,6 +70,7 @@ class Player:
                 self.inventory.remove(item)
                 # add dropped item to current position area
                 map.add_to_area(item, self.position_index)
+                self.item_commands.remove(game_items.all[item]["action"])
 
                 print(f"Item dropped: {item}")
             else:
