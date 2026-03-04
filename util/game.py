@@ -39,7 +39,7 @@ class Game:
             elif action == "take":
                 self.player.pick_up(target, current_pos, self.map, self.items)
             elif action == "drop":
-                self.player.drop(target, self.map)
+                self.player.drop(target, self.map, self.items)
             elif action == "inventory":
                 self.player.print_inventory()
             elif action == "investigate":
