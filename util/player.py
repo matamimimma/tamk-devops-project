@@ -102,6 +102,9 @@ class Player:
         if not in_inventory:
             print(f"Item not found in iventory: {target}")
 
+# Check inventory for item
+    def is_in_inventory(self):
+        pass
 
 # Test code here
 if __name__ == "__main__":
