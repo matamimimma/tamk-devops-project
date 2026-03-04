@@ -13,7 +13,7 @@ if __name__ == "__main__":
     map = Map()
     items = Items()
     player = Player(start_pos)
-    game = Game(map, player)
+    game = Game(map, player, items)
 
     print("-- START --")
     map.print_area_description(player.position_index)
