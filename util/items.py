@@ -27,7 +27,7 @@ class Items:
 
 # Print items action description
     def print_action_decription(self, item):
-        pass
+        print(self.all[item]["action_desc"])
 
 # TEST code here
 if __name__ == "__main__":
