@@ -54,7 +54,7 @@ class Game:
 # Print game instructions
     def print_help(self):
         print(
-            "\nPlease use input format <action> <direction>"
+            "\nPlease use input format <action> <target>"
             "\nGame uses the following action commands:"
             )
         pass
