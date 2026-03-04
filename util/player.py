@@ -38,7 +38,7 @@ class Player:
             print("Direction not recognised")
 
 # Pick up items
-    def pick_up(self, target, current_pos, map):
+    def pick_up(self, target, current_pos, map, game_items):
         in_area = False     # item found in area
 
         # find matching item in area
@@ -49,6 +49,7 @@ class Player:
                 self.inventory.append(item)
                 # remove pick up item from area
                 map.remove_from_area(item, self.position_index)
+                self.item_commands.append(game_items.all[item]["action"])
 
                 print(f"Picked up item: {item}")
             else:
