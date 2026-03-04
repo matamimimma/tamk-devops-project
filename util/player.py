@@ -106,7 +106,10 @@ class Player:
 # Test code here
 if __name__ == "__main__":
     map = Map()
+    items = Items()
     start_pos = map.get_index("area1")
     player = Player(start_pos)
 
-    player.print_inventory()
+    player.inventory.append("item1")
+
+    player.do_item_action("use", "item1", items)
