@@ -1,12 +1,11 @@
 # player.py
 # Player specific operations and variables
 
-from util.map import Map
-
 class Player:
     def __init__(self, area_index):
         self.position_index = area_index
         self.inventory = []
+        self.item_commands = []
 
 # Change area on a map
 # current_pos = area block from map
@@ -36,7 +35,7 @@ class Player:
             print("Direction not recognised")
 
 # Pick up items
-    def pick_up(self, target, current_pos, map):
+    def pick_up(self, target, current_pos, map, game_items):
         in_area = False     # item found in area
 
         # find matching item in area
@@ -47,6 +46,7 @@ class Player:
                 self.inventory.append(item)
                 # remove pick up item from area
                 map.remove_from_area(item, self.position_index)
+                self.item_commands.append(game_items.all[item]["action"])
 
                 print(f"Picked up item: {item}")
             else:
@@ -56,7 +56,7 @@ class Player:
             print(f"Item not found in area: {target}")
 
 # Drop items
-    def drop(self, target, map):
+    def drop(self, target, map, game_items):
         in_inventory = False    # item found in inventory
 
         # find matching item in inventory
@@ -67,6 +67,7 @@ class Player:
                 self.inventory.remove(item)
                 # add dropped item to current position area
                 map.add_to_area(item, self.position_index)
+                self.item_commands.remove(game_items.all[item]["action"])
 
                 print(f"Item dropped: {item}")
             else:
@@ -82,10 +83,26 @@ class Player:
         for item in self.inventory:
             print(f"{indent:<4} {item}")
 
+# Do item action
+    def do_item_action(self, action, target, game_items):
+        in_inventory = False    # item found in inventory
+
+        # find matching item in inventory
+        for item in self.inventory:
+            if item.lower() == target:
+                in_inventory = True     # match found
+                if action == game_items.all[item]["action"]:
+                    game_items.print_action_decription(item)
+                # item command not allowed for target item
+                else:
+                    print(f"<{action}> could not be implemented for <{item}>")
+            else:
+                continue
+
+        if not in_inventory:
+            print(f"Item not found in iventory: {target}")
+
+
 # Test code here
 if __name__ == "__main__":
-    map = Map()
-    start_pos = map.get_index("area1")
-    player = Player(start_pos)
-
-    player.print_inventory()
+    print("Start from <main.py>")
