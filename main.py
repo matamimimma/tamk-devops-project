@@ -11,6 +11,7 @@ if __name__ == "__main__":
     start_pos = 0
 
     map = Map()
+    items = Items()
     player = Player(start_pos)
     game = Game(map, player)
 
