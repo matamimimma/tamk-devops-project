@@ -82,6 +82,10 @@ class Player:
         for item in self.inventory:
             print(f"{indent:<4} {item}")
 
+# Do item action
+    def do_item_action(self):
+        pass
+
 # Test code here
 if __name__ == "__main__":
     map = Map()
