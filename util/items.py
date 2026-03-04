@@ -6,8 +6,8 @@ class Items:
         self.all = {
             "item1": {
                 "desc": "Item1 description"
-                , "action": None
-                , "action_desc": None
+                , "action": "use"
+                , "action_desc": "Item1 used"
             },
             "item2": {
                 "desc": "Item2 description"
