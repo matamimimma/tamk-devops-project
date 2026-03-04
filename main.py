@@ -4,6 +4,7 @@
 from util.game import Game
 from util.map import Map
 from util.player import Player
+from util.items import Items
 
 if __name__ == "__main__":
 
