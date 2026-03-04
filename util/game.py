@@ -50,3 +50,7 @@ class Game:
 
         else:
             print("Action not regognised.")
+
+# Print game instructions
+    def print_help(self):
+        pass
