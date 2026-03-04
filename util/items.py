@@ -26,7 +26,7 @@ class Items:
         print(f"{item:<15} - {self.all[item]['desc']}")
 
 # Print items action description
-    def print_action_decription(self):
+    def print_action_decription(self, item):
         pass
 
 # TEST code here
