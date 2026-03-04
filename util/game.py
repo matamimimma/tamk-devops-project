@@ -37,7 +37,7 @@ class Game:
             elif action == "go":
                 self.player.move(self.map, current_pos, target)
             elif action == "take":
-                self.player.pick_up(target, current_pos, self.map)
+                self.player.pick_up(target, current_pos, self.map, self.items)
             elif action == "drop":
                 self.player.drop(target, self.map)
             elif action == "inventory":
