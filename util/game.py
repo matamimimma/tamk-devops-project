@@ -60,3 +60,6 @@ class Game:
         for comm in self.commands:
             print(comm)
         pass
+
+if __name__ == "__main__":
+    Game.print_help()
