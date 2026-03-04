@@ -57,6 +57,4 @@ class Map:
 
 # test code here
 if __name__ == "__main__":
-    map = Map()
-    map.print_area_description(map.get_index("area3"))
-    map.print_items_in_area(map.get_index("area3"))
+    print("Start from <main.py>")

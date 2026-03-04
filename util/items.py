@@ -31,7 +31,4 @@ class Items:
 
 # TEST code here
 if __name__ == "__main__":
-    items = Items()
-    inv = ["item1", "item3"]
-
-    items.print_action_decription("item1")
+    print("Start from <main.py>")

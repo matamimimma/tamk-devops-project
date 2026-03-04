@@ -71,3 +71,6 @@ class Game:
                     continue
                 else:
                     print(f"{indent:<4} {item:<15} <{self.items.all[item]["action"]}>")
+
+if __name__ == "__main__":
+    print("Start from <main.py>")
