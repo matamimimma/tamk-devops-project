@@ -1,9 +1,6 @@
 # player.py
 # Player specific operations and variables
 
-from util.map import Map
-from util.items import Items
-
 class Player:
     def __init__(self, area_index):
         self.position_index = area_index
