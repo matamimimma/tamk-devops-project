@@ -53,4 +53,7 @@ class Game:
 
 # Print game instructions
     def print_help(self):
+        print(
+            "\nPlease use the following input format: <action> <direction>"
+            )
         pass
