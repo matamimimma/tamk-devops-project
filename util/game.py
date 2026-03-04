@@ -2,7 +2,7 @@
 # Game controlling operations (run game, control stopping, etc.)
 
 class Game:
-    def __init__(self, map, player):
+    def __init__(self, map, player, items):
         self.running = True
         self.commands = ["stop", "go", "take", "drop", "inventory", "investigate"]
         self.map = map
