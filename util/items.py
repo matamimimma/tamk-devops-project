@@ -25,6 +25,10 @@ class Items:
     def print_item_description(self, item):
         print(f"{item:<15} - {self.all[item]['desc']}")
 
+# Print items action description
+    def print_action_decription(self):
+        pass
+
 # TEST code here
 if __name__ == "__main__":
     items = Items()
