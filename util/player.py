@@ -84,8 +84,24 @@ class Player:
             print(f"{indent:<4} {item}")
 
 # Do item action
-    def do_item_action(self):
-        pass
+    def do_item_action(self, action, target, game_items):
+        in_inventory = False    # item found in inventory
+
+        # find matching item in inventory
+        for item in self.inventory:
+            if item.lower() == target:
+                in_inventory = True     # match found
+                if action == game_items.all[item]["action"]:
+                    game_items.print_action_decription(item)
+                # item command not allowed for target item
+                else:
+                    print(f"<{action}> could not be implemented for <{item}>")
+            else:
+                continue
+
+        if not in_inventory:
+            print(f"Item not found in iventory: {target}")
+
 
 # Test code here
 if __name__ == "__main__":
