@@ -59,7 +59,14 @@ class Game:
             )
         for comm in self.commands:
             print(comm)
-        pass
+
+        if not self.player.inventory == []:
+            print("Item specific commands for items in your inventory:")
+            for item in self.player.inventory:
+                if self.items.all[item]["action"] == None:
+                    continue
+                else:
+                    print(f"{item} <{self.items.all[item]["action"]}>")
 
 if __name__ == "__main__":
     Game.print_help()
